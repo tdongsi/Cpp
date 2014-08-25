@@ -6,7 +6,7 @@ int main()
 {
 
 //    projecteuler::solutions::solve_problem001();
-    projecteuler::solutions::solve_problem003();
+    projecteuler::solutions::solve_problem005();
 
     return 0;
 }

@@ -3,7 +3,8 @@
 #include <iostream>
 #include <cmath>
 
-// The first problem is too simple to create a class for it
+// The first few problems are too simple to create a class for it
+
 void projecteuler::solutions::solve_problem001()
 {
     int sum = 0;
@@ -36,6 +37,24 @@ void projecteuler::solutions::solve_problem003()
             break;
         }
     }
+
+    return;
+}
+
+
+void projecteuler::solutions::solve_problem005()
+{
+    long product = 2520L;
+    long gcd_out = 1;
+
+    for ( long i = 11; i <= 20; i ++ )
+    {
+        gcd_out = projecteuler::utility::gcd( product, i );
+
+        product *= i/gcd_out;
+    }
+
+    std::cout << " The product is " << product << std::endl;
 
     return;
 }

@@ -16,3 +16,17 @@ bool projecteuler::utility::isPrime( long number )
 
     return true;
 }
+
+long projecteuler::utility::gcd( long a, long b)
+{
+    long temp = a % b;
+
+    while ( temp != 0 )
+    {
+        a = b;
+        b = temp;
+        temp = a%b;
+    }
+
+    return b;
+}
