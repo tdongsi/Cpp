@@ -2,3 +2,15 @@
 1385320478 source:c:\finalworkspace\main\hub\cpp\cppprimer\main.cpp
 	<iostream>
 
+1408937538 source:e:\epigineer\github\cpp\cppprimer\main.cpp
+	<iostream>
+	"SaleData.h"
+
+1408928969 e:\epigineer\github\cpp\cppprimer\sales_data.h
+
+1408937318 e:\epigineer\github\cpp\cppprimer\saledata.h
+	<string>
+
+1408937338 source:e:\epigineer\github\cpp\cppprimer\saledata.cpp
+	"SaleData.h"
+
