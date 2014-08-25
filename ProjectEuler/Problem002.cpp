@@ -1,7 +1,7 @@
 #include "Problem002.h"
 #include <iostream>
 
-void projecteuler::problem002::solve_problem002()
+void projecteuler::solutions::solve_problem002()
 {
     long sum = 0;
     long first = 1;
