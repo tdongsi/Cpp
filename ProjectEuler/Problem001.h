@@ -13,6 +13,8 @@ namespace projecteuler{ namespace solutions {
     void solve_problem006();
 
     void solve_problem007();
+
+    void solve_problem009();
 }} // end projecteuler::solutions
 
 

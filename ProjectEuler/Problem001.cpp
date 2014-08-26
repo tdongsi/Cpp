@@ -101,3 +101,54 @@ void projecteuler::solutions::solve_problem007()
 
     return;
 }
+
+
+// Preliminary math analysis gives c in range [409 .. 500]
+// c must be less than or equal 500. Otherwise, c^2 > 500^2 > (a+b)^2 > a^2 + b^2.
+// c must be greater than or equal 408 since (a+b+c)^2 <= 2((a+b)^2 + c^2) <= 2(2(a^2+b^2)+c^2) = 6c^2 which implies c >= 1000/sqrt(6)
+void projecteuler::solutions::solve_problem009()
+{
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    int sumAB = 0;  // sum of a and b: a+b
+    int productAB = 0;  // product of a and b: ab
+    int sumSqrAB = 0;   // sum of squares of a and b: a^2 + b^2
+
+    int delta, sqrtDelta;
+
+    for ( c = 409; c <= 500; c++ )
+    {
+        sumAB = 1000 - c;
+        sumSqrAB = c*c;
+        productAB = sumAB*sumAB - sumSqrAB;
+
+        if ( productAB % 2 == 1 )
+            // product not an integer, no integer solution
+            continue;
+        else
+            productAB /= 2;
+
+        // Solving the quadratic equation x^2 - sumAB*x + productAB = 0
+        delta = sumAB*sumAB - 4*productAB;
+        sqrtDelta = static_cast<int>( sqrt(delta) );
+
+        if ( (delta - sqrtDelta*sqrtDelta) != 0 )
+            // delta not an integer, no integer solution
+            continue;
+        else {
+            if ( (sumAB + sqrtDelta) % 2 == 0 )
+            {
+                // we have an integer solution
+                a = (sumAB + sqrtDelta) /2;
+                b = (sumAB - sqrtDelta) /2;
+                break;
+            }
+        }
+    }
+
+    std::cout << "a b c: " << a << " " << b << " " << c << std::endl;
+    std::cout << " Answer: " << (a*b*c) << std::endl;
+
+    return;
+}
