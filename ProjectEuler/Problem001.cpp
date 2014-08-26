@@ -80,3 +80,24 @@ void projecteuler::solutions::solve_problem006()
 
     return;
 }
+
+void projecteuler::solutions::solve_problem007()
+{
+    int count = 2; // count for prime number 2,3
+    long number = 3;
+
+    while ( count < 10001 )
+    {
+        // start checking from number 5
+        number+=2;
+
+        if ( projecteuler::utility::isPrime( number ) )
+        {
+            count++;
+        }
+    }
+
+    std::cout << "The number is " << number << std::endl;
+
+    return;
+}
