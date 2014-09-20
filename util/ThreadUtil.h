@@ -17,7 +17,7 @@ namespace my { namespace util {
 
 class ThreadUtil {
 public:
-  /*
+  /**
   * Sleep for the given number of seconds.
   * No Boost nor C++11 for backward compatability, on older systems.
   */
