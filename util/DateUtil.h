@@ -33,7 +33,7 @@ struct Month
 
 // Day of Week enumeration
 // NOT using enum class in C+11 for backward compatability
-struct DayOfWeek
+struct WeekDay
 {
   enum type
   {
@@ -62,6 +62,11 @@ public:
   * Similar to getCurrentMonth but enforce the limited enumeration of months.
   */
   static Month::type getCurrentMonthName() { return static_cast<Month::type>( getCurrentMonth() );}
+  
+  /**
+  * Get the current day of the week.
+  */
+  static WeekDay::type getCurrentWeekday();
 
 private:
 };

@@ -25,4 +25,11 @@ int DateTimeUtil::getCurrentDay()
   return now->tm_mday;
 }
 
+WeekDay::type DateTimeUtil::getCurrentWeekday()
+{
+  std::time_t res = std::time(NULL);
+  const std::tm* now = std::localtime(&res);
+  return static_cast<WeekDay::type> (now->tm_wday);
+}
+
 }} // end namespace my::qatest
