@@ -16,8 +16,9 @@ namespace my { namespace util {
 class DateTimeUtil {
 public:
   /*
-  * Get today's year, month, day by using built-in standard library (no Boost nor C++11)
-  * Good enough for testing general date classes.
+  * Get today's year, month, day by using built-in standard library.
+  * No Boost nor C++11 for backward compatability. 
+  * Good enough for testing general date classes, especially on older systems.
   */
   static int getCurrentYear();
   static int getCurrentMonth();
