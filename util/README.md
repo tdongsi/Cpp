@@ -6,6 +6,6 @@ List of classes and methods:
 * **DateTimeUtil**: Date/Time related methods
   * Get the current day, month, year, weekday.
 * **PerformanceUtil**: Methods that are used in performance tests.
-  ** Get memory usage by the current process.
+  * Get memory usage by the current process.
 * **ThreadUtil**: Thread-related methods.
   * Sleep by given seconds on both Windows and Linux.
